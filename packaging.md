@@ -2,17 +2,22 @@
 
 We have a few “forks” of GIT packaging repositories in the ARPA2 project
 at GitHub, to help us with distribution / release stuff. Our immediate
-concern for now is to release in these two streams:
+concern for now is to release in these two-and-a-half streams:
 
   * everything should end up in Nix (covering a variety of Linux
     distros; Nix provides building and packaging)
   * some things in MXE (a sort of ports tree for cross-compilation to
     Windows; packaging will be done through MakeNSIS)
+  * everything that uses CMake should create packages through
+    CPack for selected target platforms (although we haven't
+    really defined what those are, and it depends on running
+    CPack on the target platform).
 
 The two repositories for this are
 
   * https://github.com/arpa2/nixpkgs
   * https://github.com/arpa2/mxe
+  * (the CPack stuff lives in each individual repo)
 
 Why forking the original repos? Because we may want to have another release
 cycle, and perhaps take a stab ahead, for instance by taking out some of
