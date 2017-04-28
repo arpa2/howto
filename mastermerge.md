@@ -1,14 +1,24 @@
 # How to Merge with Master for ARPA2 projects
 
-Currently, we are putting our work out in two forms: Nix and MXE.  We
-use Nix for POSIX platforms and MXE for crossover building to Windows.
+Currently, we are putting our work out in two forms: Docker and MXE.  We
+use Docker for all platforms and MXE for crossover building to native
+Windows applications.
 
 # Branches
 
 Subprojects usually work in their own branch of these repositories, and
 can add it to `master` when done.  But when is something done?
 
+# Merge projects using Docker
+
+The repositories holding a `Dockerfile` and additional files that are
+needed to setup a Docker image can be stored in `arpa2/docker-XXX` for
+a project named `XXX`.
+
+
 # Merge branch to master in Nix
+
+DEPRECATED.
 
 First, make sure the branch is merged with the current `master`, and
 ensure that the only difference with `master` that remains is the work

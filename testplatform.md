@@ -11,8 +11,11 @@ for development and testing.
     be sure to setup `/etc/apt/sources.list` with `stable` as your target,
     not `jessie` or anything; this means you can follow the change to a
     new platform automatically.
-  * Use our [Nix Packages stream](https://github.com/arpa2/nixpkgs),
+  * DEPRECATED: Use our [Nix Packages stream](https://github.com/arpa2/nixpkgs),
     possibly specialised to your current environment.
+  * For daemons, create a [Docker project](deliverables.html) as deliverable
+    once the code becomes useful for sharing.  This enables others to test
+    your work.
 
 When reporting problems among ourselves, we should always strive to have
 these sources up to date, and be able to reproduce the problem there.

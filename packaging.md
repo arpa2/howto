@@ -4,8 +4,11 @@ We have a few “forks” of GIT packaging repositories in the ARPA2 project
 at GitHub, to help us with distribution / release stuff. Our immediate
 concern for now is to release in these two-and-a-half streams:
 
-  * everything should end up in Nix (covering a variety of Linux
-    distros; Nix provides building and packaging)
+  * everything should end up in Docker repositories, covering a variety
+    of Linux distros
+  * DEPRECATED: everything should end up in Nix (covering a variety of Linux
+    distros; Nix provides building and packaging; as it turned out, this
+    was impossible and we could only service NixOS in practice)
   * some things in MXE (a sort of ports tree for cross-compilation to
     Windows; packaging will be done through MakeNSIS)
   * everything that uses CMake should create packages through
@@ -41,7 +44,7 @@ Cheers,
 -Rick
 
 P.S. I am aware that Nix recipes could be mapped to MXE recipes, at
-least in theory, but I don’t know of any tool doing so.
+least in theory, but I don’t know of any tool doing so.  DEPRECATED.
 
 P.P.S. I’m interested if a cross-building + cross-packaging environment
 to deliver ready-to-install packages for Mac OS X. Building on Mac OS X
