@@ -1,3 +1,15 @@
 strict digraph arpa2 {
-"arpa2cm";
+// External dependencies
+node [shape=component,color=green];
+"cmake";
+"graphviz";
+
+// ARPA2 components
+node [shape=box,color=black];
+"howto";
+"arpa2cm"[xlabel="0.6"];
+
+// Dependencies
+"graphviz" -> "howto";
+"cmake" -> "arpa2cm";
 }
