@@ -6,8 +6,8 @@ ARPA2 CMake Usage
 CMake
 -----
 
-Most ARPA2 (sub-)projects and products are being converted to building
-with CMake [1]; CMake is a meta-build system, that generates files for
+Most ARPA2 (sub-)projects and products are use CMake [1] for configuration and
+building; CMake is a meta-build system, that generates files for
 an actual build system that does the work (e.g. CMake generates Makefiles
 or ninja configuration, and you run make or ninja to do the build itself).
 In this way it is comparable to autotools, but seems to be a nicer solution
@@ -20,20 +20,14 @@ This document describes the way we use CMake and CMake modules.
 CMake Library
 -------------
 
-Most ARPA2 (sub-)projects have a cmake/ directory in the top-level. This
+Most ARPA2 (sub-)projects have a `cmake/` directory in the top-level. This
 is where the CMake modules that the project uses, live. There is a central
-library of CMake modules, too, in the howto repository (this one). This
+library of CMake modules, too, in the *arpa2cm* repository [2]. That
 is where the canonical versions of the modules live. Individual projects
-are expected to copy the modules they use to their own cmake/ directory
-(and possibly update occasionally as the library is updated). This is
-normal for CMake modules (unless you take an approach like KDE's 
-extra-cmake-modules, which is a separate package and distribution
-of a library of CMake modules).
+are expected to use the *arpa2cm* CMake modules, and write their own modules
+(in their own `cmake/` directory) in exceptional cases.
 
-The library contains the following modules:
-
- - MacroEnsureOutOfSourceBuild (taken from KDE ECM, actually)
- 
+[2] https://github.com/arpa2/arpa2cm/
 
 CMake Coding Style
 ------------------
@@ -48,8 +42,9 @@ CMake file. For new code, or as a style-guide, we use:
   instead of making them all-caps.
 - for project-level variables, use all-caps.
 - for (macro-)internal variables, use an underscore and all-lower, e.g. `_foo`
- 
- 
+- long lists (or function calls) put the closing parenthesis on a line
+  by itself, indented to match the start of the call.
+
 CMake Sample
 ------------
 
