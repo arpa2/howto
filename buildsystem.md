@@ -6,7 +6,7 @@ ARPA2 CMake Usage
 CMake
 -----
 
-Most ARPA2 (sub-)projects and products are use CMake [1] for configuration and
+Most ARPA2 (sub-)projects and products are use [CMake][1] for configuration and
 building; CMake is a meta-build system, that generates files for
 an actual build system that does the work (e.g. CMake generates Makefiles
 or ninja configuration, and you run make or ninja to do the build itself).
@@ -22,7 +22,7 @@ CMake Library
 
 Most ARPA2 (sub-)projects have a `cmake/` directory in the top-level. This
 is where the CMake modules that the project uses, live. There is a central
-library of CMake modules, too, in the *arpa2cm* repository [2]. That
+library of CMake modules, too, in the [*arpa2cm* repository][2]. That
 is where the canonical versions of the modules live. Individual projects
 are expected to use the *arpa2cm* CMake modules, and write their own modules
 (in their own `cmake/` directory) in exceptional cases.
