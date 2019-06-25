@@ -16,7 +16,9 @@
    percolate upwards, triggering minor updates elsewhere.
  - [Packaging](packaging.md) of ARPA2 projects for Docker (our main
    delivery pipeline) and as native packages.
-   
+
+![ARPA2 stack](data/stack.png "ARPA2 stack and dependencies")
+
 Additional procedural suggestions:
 
  - [blogging](blogging.md)
