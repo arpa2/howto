@@ -1,15 +1,33 @@
 strict digraph arpa2 {
 // External dependencies
 node [shape=component,color=green];
+// Tools
 "cmake";
 "graphviz";
+
+// Libraries / packages
+"asn1ate";
+"krb5";
+"sasl2";
+"unbound";
 
 // ARPA2 components
 node [shape=box,color=black];
 "howto";
 "arpa2cm"[xlabel="0.6"];
+"quick-der";
+"kip";
 
 // Dependencies
 "graphviz" -> "howto";
+
 "cmake" -> "arpa2cm";
+
+"asn1ate" -> "quick-der";
+"cmake" -> "quick-der";
+
+"krb5" -> "kip";
+"quick-der" -> "kip";
+"sasl2" -> "kip";
+"unbound" -> "kip";
 }
